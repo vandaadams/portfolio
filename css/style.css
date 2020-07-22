@@ -83,6 +83,8 @@ a {
   height: 100vh;
 }
 
+/*** HOME ***/
+
 .home-container {
   display: flex;
   justify-content: center;
@@ -116,4 +118,38 @@ a {
   padding-left: 20em;
   height: 100vh;
   margin-top: 0;
+}
+
+/*** ABOUT ***/
+.about-container {
+  max-width: 700px;
+  position: absolute;
+}
+
+.about h1 {
+  position: inherit;
+  color: #fff;
+  z-index: 1;
+  top: 40%;
+  left: 35%;
+  text-decoration: overline;
+  font-size: 2.5em;
+}
+
+.square {
+  position: relative;
+  height: 50vh;
+  /* background: #0F233E; */
+  background-image: linear-gradient(#173255,#0f233e);
+  top: 0;
+  left: 10%;
+}
+
+.about-content {
+  text-align: justify;
+  position: relative;
+  left: 10%;
+  color: #0F233E;
+  line-height: 1.75;
+  font-size: 1.15em;
 }
