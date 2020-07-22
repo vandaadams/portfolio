@@ -2,6 +2,74 @@ body {
   margin: 0 auto;
 }
 
+/*** Navbar ***/
+
+.navbar-container {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	margin-right: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	width: 100%;
+	height: 70px;
+	background: rgba(255,255,255,0.3);
+}
+
+.nav,
+.navbar {
+	width: 500px;
+	margin: auto;
+	margin-top: 20px;
+	font-size: 1em;
+	font-weight: 400;
+	letter-spacing: 2px;
+	list-style: none;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+
+a {
+  position: relative;
+	color: #4a4a4a;
+	text-decoration: none;
+}
+
+.nav-item {
+	padding: 5px 0;
+}
+
+.nav-item:after {
+		content: '\00a0';
+		display: block;
+		height: 6px;
+		width: 85%;
+		position: relative;
+		top: -6px;
+    left: -6px;
+		background: transparent;
+		transition: top .3s ease-out;
+		-webkit-transition: top .3s ease-out;
+}
+
+.nav-item:hover:after {
+		top: -1px;
+		background: #4a4a4a;
+}
+
+
+.nav-item .active {
+  z-index: -1;
+	background: #cd96a1 !important;
+}
+.active::after {
+  z-index: -1;
+	background: #cd96a1 !important;
+}
+
 
 .section {
   height: 100vh;
