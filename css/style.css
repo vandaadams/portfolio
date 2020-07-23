@@ -343,3 +343,22 @@ a {
 transition: 1s all ease-in-out;
 transform: translateX(0);
 }
+
+/*** CONTACT ***/
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list-inline {
+  font-size: 2em;
+  list-style: none;
+  padding: 0;
+}
+
+.list-inline > li {
+  display: inline;
+}
