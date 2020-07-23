@@ -155,6 +155,26 @@ a {
 }
 
 /*** PROJECTS ***/
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#fff,#fff,#ccc,#ccc,#ccc);
+}
+
+.project-headline {
+  font-size: 2.75em;
+  font-weight: 400;
+  height: 70vh;
+  margin: 0;
+  padding: 0 16px;
+  color: #fff;
+  text-align: center;
+  background-image: linear-gradient(#666,#444);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
 .carousel {
   width: 100%;
@@ -164,6 +184,7 @@ a {
   max-height: 70vh;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .carousel-item {
@@ -173,8 +194,6 @@ a {
   height: 100%;
   align-items: center;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-justify-content: flex-end;
   position: relative;
   background-color: #fff;
   flex-shrink: 0;
@@ -197,15 +216,10 @@ a {
 
 .carousel-item__image{
   width: 100%;
-  height: 70%;
+  height: 100%;
   order: 2;
   align-self: center;
   flex-basis: 60%;
-
-  -webkit-order: 2;
-  -webkit-align-self: center;
-  -webkit-flex-basis: 60%;
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -225,6 +239,7 @@ a {
 }
 
 .carousel-item__subtitle {
+  padding-bottom: 1em;
   letter-spacing: 3px;
   font-size: 0.8em;
   text-transform: uppercase;
@@ -260,9 +275,6 @@ a {
   text-align: justify;
 }
 
-.carousel-item__container{
-
-}
 
 .carousel-item__btn {
   width: 35%;
