@@ -1,5 +1,3 @@
-
-
 // Scrolls into section when navlink is clicked
 
 const scrollLinks = document.querySelectorAll('.scroll')
@@ -50,3 +48,48 @@ inView('.section')
 //     link.parentElement.classList.add('active')
 //   })
 // });
+
+const carouselItems = document.querySelectorAll('.carousel-item')
+const total = carouselItems.length;
+const moveRight = document.getElementById('moveRight')
+const moveLeft = document.getElementById('moveLeft')
+let current = 0;
+
+carouselItems.forEach(item => {
+  // sets first element as active
+  console.log(item)
+  if(item === carouselItems[0]) {
+    item.classList.add('active-item')
+  }
+});
+
+moveRight.addEventListener('click', (event) => {
+  // declares next element by adding 1 to current element
+  let next = current;
+  current += 1;
+  setSlide(next, current);
+})
+
+moveLeft.addEventListener('click', (event) => {
+  // declares previous element by removing 1 from current element
+  let prev = current;
+  current -= 1;
+  setSlide(prev, current);
+})
+
+function setSlide(prev,next) {
+  // sets first and last element for infinite slide
+  let slide = current
+  if (next > total-1) {
+    slide = 0;
+    current = 0;
+  } else if (next < 0) {
+    slide = total - 1;
+    current = total - 1;
+  }
+
+  // removes active class from previous carousel item
+  // adds active class to current carousel item
+  carouselItems[prev].classList.remove('active-item')
+  carouselItems[current].classList.add('active-item')
+}
