@@ -160,8 +160,8 @@ a {
   width: 100%;
   height: 100%;
   display: flex;
-  max-width: 900px;
-  max-height: 550px;
+  max-width: 90vw;
+  max-height: 70vh;
   overflow: hidden;
   position: relative;
 }
@@ -173,6 +173,8 @@ a {
   height: 100%;
   align-items: center;
   justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-justify-content: flex-end;
   position: relative;
   background-color: #fff;
   flex-shrink: 0;
@@ -193,18 +195,33 @@ a {
   width: 40%;
 }
 
-.carousel-item__image img{
+.carousel-item__image{
   width: 100%;
-  height: 30vh;
+  height: 70%;
   order: 2;
-  align-self: flex-end;
+  align-self: center;
   flex-basis: 60%;
+
+  -webkit-order: 2;
+  -webkit-align-self: center;
+  -webkit-flex-basis: 60%;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position:relative;
   transform: translateX(100%);
   transition: 0.6s all ease-in-out;
+}
+
+.carousel-item--1 .carousel-item__image{
+  background-image: url(../assets/turniptracker.png);
+}
+.carousel-item--2 .carousel-item__image{
+  background-image: url(../assets/hop.png);
+}
+.carousel-item--3 .carousel-item__image{
+  background-image: url(../assets/cake.png);
 }
 
 .carousel-item__subtitle {
@@ -307,11 +324,11 @@ a {
 .active-item .carousel-item__btn{
   transform: translateY(0);
   opacity: 1;
-  transition: 0.6s all ease-in-out;
+  transition: 1s all ease-in-out;
   visibility: visible;
 }
 
 .active-item .carousel-item__image{
-transition: 0.6s all ease-in-out;
+transition: 1s all ease-in-out;
 transform: translateX(0);
 }
