@@ -78,17 +78,15 @@ a {
 
 .section {
   height: 100vh;
+  opacity: 1;
+  transition: opacity 1.5s;
+  transform: translate(0, 0);
 }
 
-section {
+.hidden {
   opacity:0;
   transform: translate(0, 150px);
   transition: all 1s;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translate(0, 0);
 }
 
 /*** HOME ***/

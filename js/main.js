@@ -1,4 +1,4 @@
-// Scrolls into section when navlink is clicked
+// scrolls into section when navlink is clicked
 
 const scrollLinks = document.querySelectorAll('.scroll')
 
@@ -99,13 +99,13 @@ setSlide = (prev,next) => {
   carouselItems[current].classList.add('active-item')
 }
 
-// sections fade in on scroll
 
+// sections fade in on scroll
 window.addEventListener('scroll', event => {
   const pageTop = window.scrollY;
   const height = window.innerHeight;
   const pageBottom = pageTop + height;
-  const sections = document.querySelectorAll('section')
+  const sections = document.querySelectorAll('.section')
 
   // gets pageTop value of an element
   getPositionY = (element) => {
@@ -113,14 +113,14 @@ window.addEventListener('scroll', event => {
     return rect.y
   }
 
-  for (let i = 0; i < sections.length; i++) {
-    const section = sections[i]
-    const sectionTop = getPositionY(section)
-    // fades in section when scrolled down to 50% of the window
-    if (sectionTop < pageBottom * 0.5) {
-      section.classList.add('visible')
-    } else {
-      section.classList.remove('visible')
-    }
-  }
+  // for (let i = 0; i < sections.length; i++) {
+  //   const section = sections[i]
+  //   const sectionTop = getPositionY(section)
+  //   // fades in section when scrolled down to 33% of the window
+  //   if (sectionTop < pageBottom * 0.5) {
+  //     section.classList.remove('hidden')
+  //   } else {
+  //     section.classList.add('hidden')
+  //   }
+  // }
 });
