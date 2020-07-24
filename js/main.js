@@ -82,7 +82,7 @@ moveLeft.addEventListener('click', (event) => {
   setSlide(prev, current);
 })
 
-function setSlide(prev,next) {
+setSlide = (prev,next) => {
   // sets first and last element for infinite slide
   let slide = current
   if (next > total-1) {
@@ -99,7 +99,32 @@ function setSlide(prev,next) {
   carouselItems[current].classList.add('active-item')
 }
 
-
+// sections fade in on scroll
 window.addEventListener('scroll', event => {
+  const pageTop = window.scrollY;
+  const height = window.innerHeight;
+  const pageBottom = pageTop + height;
+  const sections = document.querySelectorAll('.section')
+  // console.log(pageTop, pageBottom)
+
+  getPositionY = (element) => {
+    const rect = element.getBoundingClientRect();
+    console.log(rect.y)
+    return rect.y
+  }
+
+
+    for (let i = 0; i < sections.length; i++) {
+      let section = sections[i]
+      let elementTop = getPositionY(section)
+      if (elementTop < pageBottom/2) {
+        console.log('visible')
+        section.classList.remove('hidden')
+      } else {
+        console.log('hidden')
+        section.classList.add('hidden')
+      }
+    }
+
 
 });
