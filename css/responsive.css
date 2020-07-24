@@ -75,14 +75,6 @@
   }
 
   footer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-left: 1em;
-    margin-top: -3em;
-  }
-
-  .up-arrow {
-    opacity: 0.5;
+    visibility: hidden;
   }
 }
