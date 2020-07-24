@@ -80,13 +80,13 @@ a {
   height: 100vh;
   opacity: 1;
   transition: opacity 1.5s;
-  transform: translate(0, 0);
+  /* transform: translate(0, 0); */
 }
 
 .hidden {
   opacity:0;
-  transform: translate(0, 150px);
-  transition: all 1s;
+  /* transform: translate(0, 20px);
+  transition: all 1s; */
 }
 
 /*** HOME ***/
