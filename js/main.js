@@ -1,4 +1,4 @@
-// Scrolls into section when navlink is clicked
+// scrolls into section when navlink is clicked
 
 const scrollLinks = document.querySelectorAll('.scroll')
 
@@ -23,10 +23,13 @@ inView('.section')
         link.parentElement.classList.add('active')
       }
     });
-    // makes footer visible on all sections but home
     if (section.id != 'home') {
+      // makes footer visible on all sections but home
       document.getElementById('footer').classList.add('visible')
+      // section fades in
+      document.querySelector('.' + section.id).classList.remove('hidden')
     } else if (section.id == 'home') {
+      // removes footer on home section
       document.getElementById('footer').classList.remove('visible')
     }
   })
@@ -37,11 +40,17 @@ inView('.section')
         link.parentElement.classList.remove('active')
       }
     });
+    // section fades out
+    if (section.id != 'home') {
+      document.querySelector('.' + section.id).classList.add('hidden')
+    }
   })
 
   inView.threshold(0.5);
 
-// Adds styling to active navlink
+
+// --------------------------------------------------- //
+// Adds active styling to active navlink
 
 // const navLinks =  document.querySelectorAll('a')
 //
@@ -54,6 +63,7 @@ inView('.section')
 //     link.parentElement.classList.add('active')
 //   })
 // });
+// --------------------------------------------------- //
 
 const carouselItems = document.querySelectorAll('.carousel-item')
 const total = carouselItems.length;
@@ -82,7 +92,7 @@ moveLeft.addEventListener('click', (event) => {
   setSlide(prev, current);
 })
 
-function setSlide(prev,next) {
+setSlide = (prev,next) => {
   // sets first and last element for infinite slide
   let slide = current
   if (next > total-1) {
@@ -99,7 +109,32 @@ function setSlide(prev,next) {
   carouselItems[current].classList.add('active-item')
 }
 
-
+// --------------------------------------------------- //
+// sections fade in on scroll
 window.addEventListener('scroll', event => {
+  const pageTop = window.scrollY;
+  const height = window.innerHeight;
+  const pageBottom = pageTop + height;
+  const sections = document.querySelectorAll('.section')
 
+  // gets pageTop value of an element
+  getPositionY = (element) => {
+    const rect = element.getBoundingClientRect();
+    return rect.y
+  }
+
+  makeVisible = () => {
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i]
+      const sectionTop = getPositionY(section)
+      // fades in section when scrolled down to 33% of the window
+      if (sectionTop < pageBottom * 0.5) {
+        section.classList.remove('hidden')
+      } else {
+        section.classList.add('hidden')
+      }
+    }
+  }
+  // setTimeout(makeVisible(), 500);
 });
+// --------------------------------------------------- //
