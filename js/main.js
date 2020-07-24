@@ -23,13 +23,12 @@ inView('.section')
         link.parentElement.classList.add('active')
       }
     });
+    // fades in section
+    document.querySelector('.' + section.id).classList.remove('hidden')
+    // makes footer visible on all sections but home
     if (section.id != 'home') {
-      // makes footer visible on all sections but home
       document.getElementById('footer').classList.add('visible')
-      // section fades in
-      document.querySelector('.' + section.id).classList.remove('hidden')
     } else if (section.id == 'home') {
-      // removes footer on home section
       document.getElementById('footer').classList.remove('visible')
     }
   })
@@ -40,10 +39,8 @@ inView('.section')
         link.parentElement.classList.remove('active')
       }
     });
-    // section fades out
-    if (section.id != 'home') {
-      document.querySelector('.' + section.id).classList.add('hidden')
-    }
+    // fades out section
+    document.querySelector('.' + section.id).classList.add('hidden')
   })
 
   inView.threshold(0.5);

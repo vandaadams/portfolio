@@ -1,0 +1,88 @@
+@media only screen and (max-width: 768px) {
+  .section {
+    overflow-x: hidden;
+  }
+
+  .navbar-container {
+    visibility: hidden;
+  }
+
+  .home img {
+    padding-left: 0;
+    height: 80vh;
+  }
+
+  .home-content {
+    color: white;
+    mix-blend-mode: hard-light;
+    background: #4a4a4a;
+    padding: 1em;
+    font-size: 1em;
+    top: 70%;
+    left: 26%;
+  }
+
+  .about-container {
+    max-width: 320px;
+  }
+
+  .about h1 {
+    top: 15%;
+  }
+
+  .about-content {
+    line-height: 1.5;
+    font-size: 1em;
+  }
+
+  .square {
+    height: 30vh;
+    width: 100%;
+  }
+
+  .project-headline {
+    height: 100vh;
+    background: #cd96a1;
+    box-shadow: none;
+  }
+
+  .carousel {
+    max-width: 80vw;
+    max-height: 100vh;
+    box-shadow: none;
+  }
+
+  .carousel__nav {
+    right: 5%;
+  }
+
+  .carousel-item__image {
+    visibility: hidden;
+    flex-basis: 10%;
+  }
+
+  .carousel-item__info {
+    padding: 0 16px;
+    width: 80%;
+  }
+
+  .carousel-item__title {
+    font-size: 1.75em;
+  }
+
+  .contact-content {
+    max-width: 80vw;
+  }
+
+  footer {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+    margin-top: -3em;
+  }
+
+  .up-arrow {
+    opacity: 0.5;
+  }
+}

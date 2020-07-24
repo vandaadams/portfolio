@@ -266,7 +266,7 @@ a {
   font-size: 2.5em;
   line-height: 45px;
   letter-spacing: 3px;
-  font-weight: 700;
+  font-weight: 600;
   transform: translateY(25%);
   opacity: 0;
   visibility: hidden;
@@ -405,6 +405,8 @@ ul {
   opacity: 1;
 }
 
+
+/*** Footer  ***/
 .up-arrow {
   position: relative;
   bottom: -25%;
@@ -415,8 +417,6 @@ ul {
 .up-arrow:hover {
   opacity: 1;
 }
-
-/*** Footer  ***/
 
 footer {
   position: fixed;
