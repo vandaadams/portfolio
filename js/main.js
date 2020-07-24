@@ -16,13 +16,19 @@ scrollLinks.forEach(link => {
 // https://github.com/camwiegert/in-view
 
 inView('.section')
-  // adds active class to navlink when section scrolls in
   .on('enter', section => {
+    // adds active class to navlink when section scrolls in
     scrollLinks.forEach(link => {
       if ('#' + section.id === link.getAttribute('href')) {
         link.parentElement.classList.add('active')
       }
     });
+    // makes footer visible on all sections but home
+    if (section.id != 'home') {
+      document.getElementById('footer').classList.add('visible')
+    } else if (section.id == 'home') {
+      document.getElementById('footer').classList.remove('visible')
+    }
   })
   // removes active class from navlink when section scrolls out
   .on('exit', section => {
@@ -57,7 +63,6 @@ let current = 0;
 
 carouselItems.forEach(item => {
   // sets first element as active
-  console.log(item)
   if(item === carouselItems[0]) {
     item.classList.add('active-item')
   }
@@ -93,3 +98,8 @@ function setSlide(prev,next) {
   carouselItems[prev].classList.remove('active-item')
   carouselItems[current].classList.add('active-item')
 }
+
+
+window.addEventListener('scroll', event => {
+
+});

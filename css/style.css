@@ -414,4 +414,9 @@ footer {
   position: fixed;
   bottom: 1em;
   right: 1em;
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }
