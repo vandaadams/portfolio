@@ -398,10 +398,12 @@ ul {
 #icon {
   color: #cd96a1;
   opacity: 0.8;
+  transition: all .2s ease-in-out;
 }
 
 #icon:hover {
   opacity: 1;
+  transform: scale(1.2);
 }
 
 
