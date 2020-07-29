@@ -160,6 +160,10 @@ a {
   font-size: 1.15em;
 }
 
+.cv {
+  background: rgba(206, 149, 161, 0.7);
+}
+
 /*** PROJECTS ***/
 .projects {
   display: flex;
