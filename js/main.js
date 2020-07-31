@@ -13,6 +13,7 @@ scrollLinks.forEach(link => {
 });
 
 // https://github.com/camwiegert/in-view
+// Navbar active class & fade in/fade out
 
 inView('.section')
   .on('enter', section => {
