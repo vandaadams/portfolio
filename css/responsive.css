@@ -35,6 +35,10 @@
     font-size: 1em;
   }
 
+  .cv {
+    visibility: hidden;
+  }
+
   .square {
     height: 30vh;
     width: 100%;
